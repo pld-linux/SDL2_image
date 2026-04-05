@@ -8,13 +8,13 @@ Summary:	Simple DirectMedia Layer 2 - Sample Image Loading Library
 Summary(pl.UTF-8):	Przykładowa biblioteka do ładowania obrazków dla SDL2
 Summary(pt_BR.UTF-8):	Simple DirectMedia Layer 2 - Biblioteca exemplo para carga de Imagens
 Name:		SDL2_image
-Version:	2.8.8
+Version:	2.8.10
 Release:	1
 License:	Zlib-like
 Group:		Libraries
 #Source0Download: https://github.com/libsdl-org/SDL_image/releases
 Source0:	https://github.com/libsdl-org/SDL_image/releases/download/release-%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	ec3e249988c0ff1ab4e828e7edc5d39c
+# Source0-md5:	f5284d38f7e117e07661ea7ff6db0655
 Patch0:		%{name}-libjpeg.patch
 URL:		https://github.com/libsdl-org/SDL_image
 BuildRequires:	SDL2-devel >= 2.0.9
@@ -43,7 +43,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 # libjpeg.so.8
 # libjxl.so.0.11
 # libpng16.so.16
-# libtiff.so.5
+# libtiff.so.6
 # libwebp.so.7
 
 %description
@@ -155,12 +155,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.txt LICENSE.txt README.txt
 %attr(755,root,root) %{_bindir}/sdl2show
-%attr(755,root,root) %{_libdir}/libSDL2_image-2.0.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libSDL2_image-2.0.so.0
+%{_libdir}/libSDL2_image-2.0.so.*.*.*
+%ghost %{_libdir}/libSDL2_image-2.0.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libSDL2_image.so
+%{_libdir}/libSDL2_image.so
 %{_libdir}/cmake/SDL2_image
 %{_includedir}/SDL2/SDL_image.h
 %{_pkgconfigdir}/SDL2_image.pc
