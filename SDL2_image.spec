@@ -24,7 +24,7 @@ BuildRequires:	automake
 BuildRequires:	libjpeg-devel >= 8
 %{?with_jxl:BuildRequires:	libjxl-devel}
 BuildRequires:	libpng-devel >= 2:1.6.0
-BuildRequires:	libtiff-devel >= 4
+BuildRequires:	libtiff-devel >= 4.5
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libwebp-devel >= 0.6.0
 BuildRequires:	pkgconfig >= 1:0.9.0
@@ -34,7 +34,7 @@ Requires:	SDL2 >= 2.0.9
 Suggests:	libjpeg >= 8
 %{?with_jxl:Suggests:	libjxl}
 Suggests:	libpng >= 2:1.6.0
-Suggests:	libtiff >= 4
+Suggests:	libtiff >= 4.5
 Suggests:	libwebp >= 0.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
